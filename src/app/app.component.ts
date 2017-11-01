@@ -2,9 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+      <label>
+        Age:
+        <input type="text" [(ngModel)]="age">
+      </label>
+      <h1>{{age | category}}</h1>
+    `,
 })
 export class AppComponent {
-  title = 'app';
+  age = 0;
 }
